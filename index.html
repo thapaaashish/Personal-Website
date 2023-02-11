@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website </title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <section class="super">
+        <div class="main-width">
+            <header>
+                <div class="logo" alt="logo">
+                    <i class="fa-solid fa-a"></i>
+                </div>
+
+                <nav>
+                    <div class="hamb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li class="btn"><a href="#contact">Contact Me</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div class="super-text">
+
+                    <h3>Hi, There!</h3>
+                    <h1>I am <span class="input"></span></h1>
+
+                    <div class="social">
+                        <a href="https://www.instagram.com/aa.shish__/" target="_blank" class="fa-brands fa-square-instagram"></a>
+                        <a href="https://www.linkedin.com/in/aashish-thapa-7707a025a/" target="_blank" class="fa-brands fa-linkedin"></a>
+                        <a href="https://www.facebook.com/taashish510/" target="_blank" class="fa-brands fa-facebook"></a>
+                    </div>
+                    <button type="button">More About Me</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="./script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".input", {
+            strings:["Aashish Thapa.", "Web Developer.", "Student."],
+            typeSpeed: 70,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+    <!--About section from here.-->
+    <section class="about" id="about">
+        <div class="main">
+            <img src="./images/blank-profile-picture-973460_1280.png">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5>Student <span>& Developer</span></h5>
+                <p>Hello, my name is Aashish Thapa. I am 17 years old and I am currently living in Kathmandu, Nepal. I am currently studying Bachelor's in Information Technology (BIT) at Herald College Kathmandu. </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Education section from here.-->
+    <div class="education" id="education">
+        <div class="title">
+            <h2>My Education</h2>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-bars"></i>
+                <h5>SEE</h5>
+                <div class="pra">
+                    <p>SEE exam at Sambuddha Educational Academy, 
+                        Baglung, Nepal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bars"></i>
+                <h5>+2 High School</h5>
+                <div class="pra">
+                    <p>+2 at Bagmati College, Kathmandu, Nepal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-bars"></i>
+                <h5>Bachelor</h5>
+                <div class="pra">
+                    <p>Undergraduate student at Herald College Kathmandu, 
+                        Kathmandu, Nepal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--CV section starts from here.-->
+    <section class="cv" id="cv">
+        <div class="title">
+            <h2>Curriculum Vitae</h2>
+        </div>
+        <div class="download">
+            <a href="CV.pdf" download="pdffile.pdf">Download <span></span></a>
+
+            <script>
+                let button = document.querySelector("body a");
+                button.addEventListener("click",()=>{
+                    const span = document.querySelector("a span");
+                    button.style.paddingRight = '10px';
+                    span.style.visibility ="visible";
+                    setTimeout(()=>{
+                        span.style.visibility="hidden";
+                        button.style.transition = "1s ease-in-out";
+                        button.style.paddingRight="0px"
+                    },3000);
+                })
+            </script>
+        </div>
+    </section>
+
+
+
+    <!--Contact Me section starts from here.-->
+     <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Get in Touch</div>
+                        <p>You can contact me through these means.</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Aashish Thapa</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">Kathmandu, Nepal</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">taashish510@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Messege me</div>
+                        <form action="#">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" placeholder="Name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="text" placeholder="Email" required>
+                                </div>
+                                <div class="field">
+                                    <input type="text" placeholder="Subject" required>
+                                </div>
+                                <div class="field textarea">
+                                    <textarea cols="30" rows="10" placeholder="Describe project.."></textarea>
+                                </div>
+                                <div class="button">
+                                    <button type="submit">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+     </section>
+
+     <!--footer section starts from here-->
+     <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <span class="text">This website was created by Aashish Thapa (taashish510)</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#education" class="footer__link">Education</a>
+                    </li>
+                    <li>
+                        <a href="#cv" class="footer__link">CV</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/aa.shish__/" target="_blank" class="fa-brands fa-square-instagram"></a>
+                        <a href="https://www.linkedin.com/in/aashish-thapa-7707a025a/" target="_blank" class="fa-brands fa-linkedin"></a>
+                        <a href="https://www.facebook.com/taashish510/" target="_blank" class="fa-brands fa-facebook"></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; AashishThapa. All right reserved</p>
+        </div>
+        
+     </footer>
+</body>
+</html>
